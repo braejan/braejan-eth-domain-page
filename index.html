@@ -5,7 +5,6 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/styles-logico.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,14 +17,262 @@
   <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
   <meta property="og:image" content="https://ia.media-imdb.com/images/rock.jpg" />
 </head>
+<style>
+  /*
+161c22
+*/
 
+:root {
+  --general_background_color: #251F24;
+  --general_color_text: #FFFFFF;
+  --gray_text_color: #A5A3A5;
+  --background_pre_color: #3A3539;
+  --black-color: #000000 margin: 0px;
+  font-size: 17px;
+  color: var(--general_color_text);
+  background: var(--general_background_color);
+  font-family: 'Nunito', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+.header-content header img{
+  margin-block-end: 16px;
+  display: block;
+  max-inline-size: 100%;
+}
+
+.header-content {
+  padding-inline: 20px;
+}
+
+header {
+  margin-block-start: 20px;
+  font-size: 14px;
+}
+
+header nav a {
+  color: var(--gray_text_color);
+  text-decoration: none
+}
+
+nav summary {
+  font-weight: bold;
+}
+
+nav a:hover {
+  background: var(--black-color);
+  border-radius: 2px;
+  color: #FFFFFF;
+}
+
+nav li {
+  margin-block-end: 16px;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 54.56px;
+  margin-block: 40px;
+}
+
+h3 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 43.65px;
+}
+
+h4 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32.74px;
+}
+
+p, li {
+  color: var(--gray_text_color);
+  line-height: 24px;
+}
+
+p {
+  text-align: justify;
+}
+
+pre {
+  background: var(--background_pre_color);
+  max-inline-size: 100%;
+  padding-block: 40px;
+  padding-inline: 40px;
+  overflow: auto;
+  border-radius: 8px;
+  margin-block-end: 40px;
+}
+
+.hero {
+  background: linear-gradient(96.07deg, #314755 30.63%, #26A0DA 102.18%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  block-size: 50px;
+}
+
+.section-setup {
+  counter-reset: section-setup-counter;
+}
+
+.section-setup img {
+  margin-block-start: 40px;
+  display: block;
+}
+
+section.section-setup h3 {
+  counter-increment: section-setup-counter;
+}
+
+section.section-setup h3::before {
+  content: counter(section-setup-counter, decimal) '. ';
+}
+
+hr {
+  margin-block: 40px;
+  border: 1px solid rgba(97, 97, 97, 0.2);
+}
+
+.section-css ul li {
+  color: var(--general_color_text);
+}
+
+.section-css ul li span {
+  color: var(--gray_text_color);
+}
+
+blockquote {
+  margin-block-start: 80px;
+  margin-block-end: 63px;
+  background: var(--background_pre_color);
+  border-radius: 5px;
+  padding-inline: 24px;
+  padding-block: 24px;
+}
+
+blockquote p {
+  color: var(--general_color_text);
+  font-weight: 200;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.wrapper {
+  max-inline-size: 902px;
+  margin: auto;
+}
+
+.section-concepts img {
+  display: block;
+  margin-block-start: 40px;
+  max-inline-size: 100%;
+}
+
+.main-content {
+  padding-inline: 24px;
+}
+
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  font-size: 0;
+}
+
+.video {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 5px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: white;
+  border-radius: 50%;
+}
+
+.form input {
+  border: 1px solid var(--gray_text_color);
+  border-radius: 8px;
+  inline-size: 100%;
+  box-sizing: border-box;
+  background: var(--general_background_color);
+  padding-inline: 16px;
+  padding-block: 12px;
+  color: var(--general_color_text);
+  font-size: 16px;
+  display: block;
+  margin-block: 24px;
+}
+
+.form input[type="submit"] {
+  background: #157EFB;
+  border: none;
+}
+
+@media screen and (min-width: 1340px) {
+  .hero {
+    block-size: 350px;
+  }
+  .header {
+    position: sticky;
+    inset-block-start: -20px;
+  }
+  .header-content {
+    position: relative;
+    inset-block-start: 65px;
+  }
+  header {
+    font-size: 14px;
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+  }
+  h1 {
+    font-size: 64px;
+    margin-block-start: 64px;
+    line-height: 87.3px;
+  }
+}
+</style>
 <body>
   <div class="hero"></div>
   <div class="header">
     <div class="wrapper">
       <div class="header-content">
         <header>
-          <img src="/images/profile.jpg" alt="Diseño css">
+          <img src="https://raw.githubusercontent.com/braejan/braejan-eth-domain-page/main/images/profile.jpg" alt="Diseño css">
           <h5>Software Engineer</h5>
         </header>
       </div>
